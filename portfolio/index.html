@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Stefan Lienhard — Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="icon" href="sl_icon.svg"> -->
+</head>
+<body>
+	<header>
+		<h1>Stefan Lienhard — Portfolio</h1>
+		<p>I am a Computer graphics enthusiast interested in <strong>GPUs</strong>, <strong>real-time rendering</strong>, <strong>fluid simulation</strong>, and <strong>procedural modeling</strong>.</p>
+	</header>
+	<main>
+		<section>
+			<h2>Vulkan SPH Particle Fluid</h2>
+			<video src="images/vulkan_sph_particle_fluid.webm" controls=""></video>
+			<p>For my work at <a href="https://www.virtamed.com">VirtaMed</a>, I Independently developed <a href="https://blog.mmacklin.com/2013/04/24/position-based-fluids/">position-based</a> SPH (smoothed-particle hydrodynamics) particle fluid for surgical simulation. It features such particle properties as viscosity, <a href="https://cg.informatik.uni-freiburg.de/publications/2013_SIGGRAPHASIA_surfaceTensionAdhesion.pdf">surface tension, and adhesion</a>. The GPU implementation animates and mixes several 100k blood, bile fluid, and water particles in real-time. To robustly collide the fluid against constantly deforming organs, a signed distance field is regenerated every frame by voxelizing the scene and propagating distances via Eikonal equation approximation. To enable this project, I created an in-house render hardware interface (RHI) on top of Vulkan.</p>
+		</section>
+		<section>
+			<h2>Shape Modeling Language (ShapeML)</h2>
+			<figure>
+				<a href="https://github.com/stefalie/shapeml"><img src="images/shapeml.webp" alt="Screenshots of several ShapeML scenes."></a>
+				<figcaption>A showcase of some 3D models created with ShapeML.</figcaption>
+			</figure>
+			<p><em>ShapeML</em> is my own rule- or grammar-based procedural modeling library and framework inspired by <a href="https://en.wikipedia.org/wiki/Shape_grammar">Shape Grammars</a>, <a href="https://en.wikipedia.org/wiki/L-system">L-Systems</a>, and <a href="https://www.esri.com/en-us/arcgis/products/arcgis-cityengine/overview">CityEngine</a>. It generates detailed 3D models iteratively by replacing a coarse model with more detailed components. ShapeML comes with a parser/interpreter and it ships with an interactive OpenGL renderer that forward/deferred rendering, rendering of transparency objects (via <a href="http://jcgt.org/published/0002/02/09/">weighted blended order-independent transparency</a>, a layered fragment buffer, or <a href="https://software.intel.com/content/www/us/en/develop/articles/adaptive-transparency-hpg-2011.html">adaptive transparency</a>), several tone mapping methods, <a href="http://realtimecollisiondetection.net/blog/?p=86">sorted and batched draw calls</a>, <a href="http://the-witness.net/news/2013/09/shadow-mapping-summary-part-1/">optimized PCF cascade shadows maps</a>, physically-based rendering (PBR), fast approximate anti-aliasing (FXAA), and <a href="https://casual-effects.com/research/McGuire2012SAO/index.html">scalable ambient obscurance</a>, …</p>
+			<p>Code and details are on Github: <a href="https://github.com/stefalie/shapeml">https://github.com/stefalie/shapeml</a>.</p>
+		</section>
+		<section>
+			<h2>Advent of Code</h2>
+			<img src="images/advent_of_code.webp" alt="Screenshot of the puzzle overview on the Advent of Code website.">
+			<p>In like to learn new programming languages. In my opinion, the best way to do that is to participate in the <a href="https://adventofcode.com">Advent of Code</a> and solve challenges in a new languge. I did so in <a href="https://github.com/stefalie/aoc2020">2020 with Rust</a> and in <a href="https://github.com/stefalie/aoc2021">2021 with zig</a>.</p>
+		</section>
+		<section>
+			<h2>Ray Tracer</h2>
+			<a href="https://github.com/stefalie/raytracer"><img src="images/ray_tracer.webp" alt="Many ray traced spheres."></a>
+			<p>I crunched through Peter Shirley's brilliant <a href="https://raytracing.github.io">Ray Tracing in One Weekend</a> book and used it as an excuse to learn <a href="https://ziglang.org">zig</a>. The Code is on <a href="https://github.com/stefalie/raytracer">Github</a>.</p>
+		</section>
+		<section>
+			<h2>Outdoor Map</h2>
+			<figure>
+				<a href="https://map.lienhard.io"><img src="images/outdoor_map.webp" alt="A map of Switzerland with markers for various sports outings."></a>
+				<figcaption>Legend: blue — ski touring, red — hiking, green — running, purple — climbing/mountaineering, orange — cycling, turqoise — cross country skiing</figcaption>
+			</figure>
+			<p>I made a map with all my hikes, climbing outing, ski tours, etc. Tracks are exported from <a href="https://www.strava.com/athletes/673092">Strava</a> as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPX</a> or entered manually (for older outing). The data is simplified/subsampled and aggregated into a <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> layer that is shown on top of either a <a href="https://map.lienhard.io">Swisstopo map</a> or a <a href="https://map.lienhard.io/leaflet.html">Leaflet map</a>. The Code is on <a href="https://github.com/stefalie/map.lienhard.io">Github</a>.</p>
+		</section>
+		<section>
+			<h2>Design Transformations for Rule-based Procedural Modeling</h2>
+			<p><em>S. Lienhard, C. Lau, P. Müller, P. Wonka, M. Pauly</em></p>
+			<p>2017 &mdash; Computer Graphics Forum (Proc. Eurographics)</p>
+			<p><a href="images/design_transformations_eg17.pdf">pdf</a>, <a href="images/design_transformations_eg17_supplemental_material.zip">supplemental material</a>, <a href="https://doi.org/10.1111/cgf.13105">DOI</a></p>
+			<video src="images/design_transformations_eg17.webm" controls=""></video>
+			<p>Fine-grained rule merging allows combining components of several rule/grammer-based procedural models to generate many design variations and to create animated transformation sequences between different procedural designs.</p>
+		</section>
+		<section>
+			<h2>Interactive Design of Probability Density Functions for Shape Grammars</h2>
+			<p><em>M. Dang, S. Lienhard, D. Ceylan, B. Neubert, P. Wonka, and M. Pauly</em></p>
+			<p>2015 &mdash; ACM Transaction on Graphics (Proc. SIGGRAPH Asia)</p>
+			<p><a href="images/grammer_pdf_design_siga15.pdf">pdf</a>, <a href="images/grammer_pdf_design_siga15_supplemental_material.pdf">supplemental material</a>, <a href="https://doi.org/10.1145/2816795.2818069">DOI</a></p>
+			<video src="images/grammer_pdf_design_siga15.webm" controls=""></video>
+			<p>From a user's preference scores, Gaussian process regression learns a probability distribution function for a stochastic procedural grammar. Rule splitting operations adapt the grammar to generate models according to that distribution.</p>
+		</section>
+		<section>
+			<h2>Thumbnail Galleries for Procedural Models</h2>
+			<p><em>S. Lienhard, M. Specht, B. Neubert, M. Pauly, and P. Müller</em></p>
+			<p>2014 &mdash; Computer Graphics Forum (Proc. Eurographics)</p>
+			<p><a href="images/thumbnails_galleries_eg14.pdf">pdf</a>, <a href="https://doi.org/10.1111/cgf.12317">DOI</a></p>
+			<figure>
+				<img src="images/thumbnails_galleries_eg14.webp" alt="Overview of the thumbnail gallery generation pipeline presented in the paper.">
+				<figcaption>In procedural modeling, a single rule set can produce a wide variety of 3D models (left). This paper presents a thumbnail gallery generation system which automatically samples a rule set, clusters the resulting models into distinct groups (middle), and selects a representative image for each group to visualize the diversity of the rule set (right).</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h2>A Full Bi-Tensor Neural Tractography Algorithm Using the Unscented Kalman Filter</h2>
+			<p><em>S. Lienhard, J. Malcolm, C.-F. Westin, and Y. Rathi</em></p>
+			<p>2011 &mdash; EURASIP Journal on Advances in Signal Processing</p>
+			<p><a href="images/bi-tensor_tractography_eurasip11.pdf">pdf</a>, <a href="https://doi.org/10.1186/1687-6180-2011-77">DOI</a></p>
+			<figure>
+				<img src="images/bi-tensor_tractography_eurasip11.webp" alt="Neural fiber tracts found by two different tractography methods.">
+				<figcaption>Fiber tracts obtained from seeding the tractography in the right Thalamus of an in vivo scan. The blue fibers were obtained with and existing simple model, whereas the red fibers result from our new method. The close-ups show that the new approach finds more fibers.</figcaption>
+			</figure>
+			<p>My MSc project at the <a href="https://lmi.med.harvard.edu">Laboratory of Mathematics in Imaging</a> (Harvard Med School, Boston) was on visualizing neural fiber bundles in human brains. Dominant directions of water movement lie along neural paths and are traced in diffusion tensor MRI data with an unscented Kalman filter. My project was later on extended by other researchers and lives on in <a href="https://www.slicer.org/wiki/Documentation/4.10/Modules/UKFTractography">3D Slicer</a>.</p>
+		</section>
+		<section>
+			<h2>Mini 3D Engine</h2>
+			<video src="images/mini_3d_engine.webm" controls=""></video>
+			<p>Inspired by Orxonox (see below), I set out to write my own 3D engine while I was on exchange at the University of Toronto (UofT) in 2007. It was awarded a 2nd best project prize in the Introduction to Computer Graphics lecture. The 3D model of the space ship is courtesy of <a href="https://bediff.ch">Thierry Zaugg</a>.</p>
+		</section>
+		<section id="orxonox">
+			<h2>Orxonox</h2>
+			<p><a href="https://www.orxonox.net">Orxonox</a> was an open source space shooter game developed by students at ETH Zurich. In 2005–2006 I contributed a water shader with waves, transparency, reflections and refractions written in OpenGL and GLSL, and I worked on an ffmpeg-based in-game video player together with a colleague. Unfortunately, videos and screenshots of my work have been lost to time.</p>
+		</section>
+	</main>
+	<footer>
+		<!-- <p>We don't like empty footers.</p> -->
+	</footer>
+</body>
+</html>

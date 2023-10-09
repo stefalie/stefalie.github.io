@@ -1,0 +1,114 @@
+:root {
+	/* TODO check that all are used more than once */
+	--color-bg: #f4f4f4;
+	--color-border: #ccc;
+	/*--color-bg-txt: #fffefd;*/
+	--color-bg-txt: #fefdfc;
+	--color-txt: #333;
+	--color-txt-cap: #999;
+	/*--color-txt-hl: #4779af;*/
+	/*--color-hov: #d5405c;*/
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font: 125%/1.4 XCharter, serif;
+}
+
+body {
+	margin: 0;
+	color: var(--color-txt);
+	background: var(--color-bg-txt);
+}
+
+/* apply these to first level section isntead */
+header, main {
+	padding: 40px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+main {
+	margin-bottom: 100px;
+}
+
+@font-face {
+	font-family: XCharter;
+	src: url("xcharter-roman_tmp.woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: XCharter;
+	src: url("xcharter-bold_tmp.woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: XCharter;
+	src: url("xcharter-italic_tmp.woff2");
+	font-weight: normal;
+	font-style: italic;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	margin: 1.6em 0 0.8rem;
+	margin: 2em 0 0.8rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.6rem;
+}
+h3 {
+	font-size: 1.3rem;
+}
+
+/* TODO: do we want all this? */
+p, pre, img, figure,
+section > ol, section > ul {
+	margin: 0.8rem 0;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+section img,
+figure img,
+section video,
+figure video {
+	display: block;
+	width: 720px;
+	margin: 0.5rem 0;
+}
+figcaption {
+	text-align: center;
+	font-size: 0.9rem;
+	color: var(--color-txt-cap);
+}
+
+@media screen and (max-width: 800px) {
+	section img,
+	figure img {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 640px) {
+	html {
+		font-size: 110%;
+	}
+	main {
+		padding: 20px;
+	}
+}
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 95%;
+	}
+}
