@@ -95,7 +95,9 @@ figcaption {
 
 @media screen and (max-width: 800px) {
 	section img,
-	figure img {
+	figure img,
+	section video,
+	figure video {
 		width: 100%;
 	}
 }
