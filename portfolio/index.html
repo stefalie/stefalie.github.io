@@ -5,21 +5,35 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
-	<!-- <link rel="icon" href="sl_icon.svg"> -->
 </head>
 <body>
 	<header>
 		<h1>Stefan Lienhard — Portfolio</h1>
+		<nav>
+			<a href="mailto:stefan@lienhard.io" aria-label="E-Mail address"><svg><use xlink:href="icons.svg#email"/></svg></a>
+			<!-- <a href="images/cv_stefan_lienhard.pdf" aria-label="CV pdf link"><svg><use xlink:href="icons.svg#cv"/></svg></a> -->
+			<a href="https://github.com/stefalie" aria-label="Github profile"><svg><use xlink:href="icons.svg#github"/></svg></a>
+			<a href="https://twitter.com/stefanlienhard" aria-label="Twitter profile"><svg><use xlink:href="icons.svg#twitter"/></svg></a>
+			<a href="https://www.instagram.com/stefan.lienhard" aria-label="Instagram profile"><svg><use xlink:href="icons.svg#instagram"/></svg></a>
+			<a href="https://www.linkedin.com/in/stefan-lienhard" aria-label="LinkedIn profile"><svg><use xlink:href="icons.svg#linkedin"/></svg></a>
+			<a href="https://mastodon.gamedev.place/@stefalie" aria-label="Mastodon profile"><svg><use xlink:href="icons.svg#mastodon"/></svg></a>
+		</nav>
 		<p>I am a Computer graphics enthusiast interested in <strong>GPUs</strong>, <strong>real-time rendering</strong>, <strong>fluid simulation</strong>, and <strong>procedural modeling</strong>.</p>
 	</header>
 	<main>
 		<section>
 			<h2>Vulkan SPH Particle Fluid</h2>
+			<aside>
+				<p>2021–2023</p>
+			</aside>
 			<video src="images/vulkan_sph_particle_fluid.webm" controls=""></video>
 			<p>For my work at <a href="https://www.virtamed.com">VirtaMed</a>, I Independently developed <a href="https://blog.mmacklin.com/2013/04/24/position-based-fluids/">position-based</a> SPH (smoothed-particle hydrodynamics) particle fluid for surgical simulation. It features such particle properties as viscosity, <a href="https://cg.informatik.uni-freiburg.de/publications/2013_SIGGRAPHASIA_surfaceTensionAdhesion.pdf">surface tension, and adhesion</a>. The GPU implementation animates and mixes several 100k blood, bile fluid, and water particles in real-time. To robustly collide the fluid against constantly deforming organs, a signed distance field is regenerated every frame by voxelizing the scene and propagating distances via Eikonal equation approximation. To enable this project, I created an in-house render hardware interface (RHI) on top of Vulkan.</p>
 		</section>
 		<section>
 			<h2>Shape Modeling Language (ShapeML)</h2>
+			<aside>
+				<p>2018–2021</p>
+			</aside>
 			<figure>
 				<a href="https://github.com/stefalie/shapeml"><img src="images/shapeml.webp" alt="Screenshots of several ShapeML scenes."></a>
 				<figcaption>A showcase of some 3D models created with ShapeML.</figcaption>
@@ -28,44 +42,59 @@
 			<p>Code and details are on Github: <a href="https://github.com/stefalie/shapeml">https://github.com/stefalie/shapeml</a>.</p>
 		</section>
 		<section>
-			<h2>Advent of Code</h2>
-			<img src="images/advent_of_code.webp" alt="Screenshot of the puzzle overview on the Advent of Code website.">
-			<p>In like to learn new programming languages. In my opinion, the best way to do that is to participate in the <a href="https://adventofcode.com">Advent of Code</a> and solve challenges in a new languge. I did so in <a href="https://github.com/stefalie/aoc2020">2020 with Rust</a> and in <a href="https://github.com/stefalie/aoc2021">2021 with zig</a>.</p>
-		</section>
-		<section>
 			<h2>Ray Tracer</h2>
+			<aside>
+				<p>2022</p>
+			</aside>
 			<a href="https://github.com/stefalie/raytracer"><img src="images/ray_tracer.webp" alt="Many ray traced spheres."></a>
 			<p>I crunched through Peter Shirley's brilliant <a href="https://raytracing.github.io">Ray Tracing in One Weekend</a> book and used it as an excuse to learn <a href="https://ziglang.org">zig</a>. The Code is on <a href="https://github.com/stefalie/raytracer">Github</a>.</p>
 		</section>
 		<section>
+			<h2>Advent of Code</h2>
+			<aside>
+				<p>2020–2021</p>
+			</aside>
+			<img src="images/advent_of_code.webp" alt="Screenshot of the puzzle overview on the Advent of Code website.">
+			<p>In like to learn new programming languages. In my opinion, the best way to do that is to participate in the <a href="https://adventofcode.com">Advent of Code</a> and solve challenges in a new languge. I did so in <a href="https://github.com/stefalie/aoc2020">2020 with Rust</a> and in <a href="https://github.com/stefalie/aoc2021">2021 with zig</a>.</p>
+		</section>
+		<section>
 			<h2>Outdoor Map</h2>
+			<aside>
+				<p>2020</p>
+			</aside>
 			<figure>
 				<a href="https://map.lienhard.io"><img src="images/outdoor_map.webp" alt="A map of Switzerland with markers for various sports outings."></a>
 				<figcaption>Legend: blue — ski touring, red — hiking, green — running, purple — climbing/mountaineering, orange — cycling, turqoise — cross country skiing</figcaption>
 			</figure>
-			<p>I made a map with all my hikes, climbing outing, ski tours, etc. Tracks are exported from <a href="https://www.strava.com/athletes/673092">Strava</a> as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPX</a> or entered manually (for older outing). The data is simplified/subsampled and aggregated into a <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> layer that is shown on top of either a <a href="https://map.lienhard.io">Swisstopo map</a> or a <a href="https://map.lienhard.io/leaflet.html">Leaflet map</a>. The Code is on <a href="https://github.com/stefalie/map.lienhard.io">Github</a>.</p>
+			<p>For fun I made a map with all my hikes, climbing outing, ski tours, etc. Tracks are exported from <a href="https://www.strava.com/athletes/673092">Strava</a> as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPX</a> or entered manually (for older outing). The data is simplified/subsampled and aggregated into a <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> layer that is shown on top of either a <a href="https://map.lienhard.io">Swisstopo map</a> or a <a href="https://map.lienhard.io/leaflet.html">Leaflet map</a>. The Code is on <a href="https://github.com/stefalie/map.lienhard.io">Github</a>.</p>
 		</section>
 		<section>
 			<h2>Design Transformations for Rule-based Procedural Modeling</h2>
-			<p><em>S. Lienhard, C. Lau, P. Müller, P. Wonka, M. Pauly</em></p>
-			<p>2017 &mdash; Computer Graphics Forum (Proc. Eurographics)</p>
-			<p><a href="images/design_transformations_eg17.pdf">pdf</a>, <a href="images/design_transformations_eg17_supplemental_material.zip">supplemental material</a>, <a href="https://doi.org/10.1111/cgf.13105">DOI</a></p>
+			<aside>
+				<p><em>S. Lienhard, C. Lau, P. Müller, P. Wonka, M. Pauly</em></p>
+				<p>2017 — Computer Graphics Forum (Proc. Eurographics)</p>
+				<p><a href="images/design_transformations_eg17.pdf">pdf</a>, <a href="images/design_transformations_eg17_supplemental_material.zip">supplemental material</a>, <a href="https://doi.org/10.1111/cgf.13105">DOI</a></p>
+			</aside>
 			<video src="images/design_transformations_eg17.webm" controls=""></video>
 			<p>Fine-grained rule merging allows combining components of several rule/grammer-based procedural models to generate many design variations and to create animated transformation sequences between different procedural designs.</p>
 		</section>
 		<section>
 			<h2>Interactive Design of Probability Density Functions for Shape Grammars</h2>
-			<p><em>M. Dang, S. Lienhard, D. Ceylan, B. Neubert, P. Wonka, and M. Pauly</em></p>
-			<p>2015 &mdash; ACM Transaction on Graphics (Proc. SIGGRAPH Asia)</p>
-			<p><a href="images/grammer_pdf_design_siga15.pdf">pdf</a>, <a href="images/grammer_pdf_design_siga15_supplemental_material.pdf">supplemental material</a>, <a href="https://doi.org/10.1145/2816795.2818069">DOI</a></p>
+			<aside>
+				<p><em>M. Dang, S. Lienhard, D. Ceylan, B. Neubert, P. Wonka, and M. Pauly</em></p>
+				<p>2015 — ACM Transaction on Graphics (Proc. SIGGRAPH Asia)</p>
+				<p><a href="images/grammer_pdf_design_siga15.pdf">pdf</a>, <a href="images/grammer_pdf_design_siga15_supplemental_material.pdf">supplemental material</a>, <a href="https://doi.org/10.1145/2816795.2818069">DOI</a></p>
+			</aside>
 			<video src="images/grammer_pdf_design_siga15.webm" controls=""></video>
 			<p>From a user's preference scores, Gaussian process regression learns a probability distribution function for a stochastic procedural grammar. Rule splitting operations adapt the grammar to generate models according to that distribution.</p>
 		</section>
 		<section>
 			<h2>Thumbnail Galleries for Procedural Models</h2>
-			<p><em>S. Lienhard, M. Specht, B. Neubert, M. Pauly, and P. Müller</em></p>
-			<p>2014 &mdash; Computer Graphics Forum (Proc. Eurographics)</p>
-			<p><a href="images/thumbnails_galleries_eg14.pdf">pdf</a>, <a href="https://doi.org/10.1111/cgf.12317">DOI</a></p>
+			<aside>
+				<p><em>S. Lienhard, M. Specht, B. Neubert, M. Pauly, and P. Müller</em></p>
+				<p>2014 — Computer Graphics Forum (Proc. Eurographics)</p>
+				<p><a href="images/thumbnails_galleries_eg14.pdf">pdf</a>, <a href="https://doi.org/10.1111/cgf.12317">DOI</a></p>
+			</aside>
 			<figure>
 				<img src="images/thumbnails_galleries_eg14.webp" alt="Overview of the thumbnail gallery generation pipeline presented in the paper.">
 				<figcaption>In procedural modeling, a single rule set can produce a wide variety of 3D models (left). This paper presents a thumbnail gallery generation system which automatically samples a rule set, clusters the resulting models into distinct groups (middle), and selects a representative image for each group to visualize the diversity of the rule set (right).</figcaption>
@@ -73,9 +102,11 @@
 		</section>
 		<section>
 			<h2>A Full Bi-Tensor Neural Tractography Algorithm Using the Unscented Kalman Filter</h2>
-			<p><em>S. Lienhard, J. Malcolm, C.-F. Westin, and Y. Rathi</em></p>
-			<p>2011 &mdash; EURASIP Journal on Advances in Signal Processing</p>
-			<p><a href="images/bi-tensor_tractography_eurasip11.pdf">pdf</a>, <a href="https://doi.org/10.1186/1687-6180-2011-77">DOI</a></p>
+			<aside>
+				<p><em>S. Lienhard, J. Malcolm, C.-F. Westin, and Y. Rathi</em></p>
+				<p>2011 — EURASIP Journal on Advances in Signal Processing</p>
+				<p><a href="images/bi-tensor_tractography_eurasip11.pdf">pdf</a>, <a href="https://doi.org/10.1186/1687-6180-2011-77">DOI</a></p>
+			</aside>
 			<figure>
 				<img src="images/bi-tensor_tractography_eurasip11.webp" alt="Neural fiber tracts found by two different tractography methods.">
 				<figcaption>Fiber tracts obtained from seeding the tractography in the right Thalamus of an in vivo scan. The blue fibers were obtained with and existing simple model, whereas the red fibers result from our new method. The close-ups show that the new approach finds more fibers.</figcaption>
@@ -84,16 +115,19 @@
 		</section>
 		<section>
 			<h2>Mini 3D Engine</h2>
+			<aside>
+				<p>2007</p>
+			</aside>
 			<video src="images/mini_3d_engine.webm" controls=""></video>
-			<p>Inspired by Orxonox (see below), I set out to write my own 3D engine while I was on exchange at the University of Toronto (UofT) in 2007. It was awarded a 2nd best project prize in the Introduction to Computer Graphics lecture. The 3D model of the space ship is courtesy of <a href="https://bediff.ch">Thierry Zaugg</a>.</p>
+			<p>Inspired by Orxonox (see below), I set out to write my own 3D engine while I was on exchange at the University of Toronto (UofT). It was awarded a 2nd best project prize in the Introduction to Computer Graphics lecture. The 3D model of the space ship is courtesy of <a href="https://bediff.ch">Thierry Zaugg</a>.</p>
 		</section>
 		<section id="orxonox">
 			<h2>Orxonox</h2>
-			<p><a href="https://www.orxonox.net">Orxonox</a> was an open source space shooter game developed by students at ETH Zurich. In 2005–2006 I contributed a water shader with waves, transparency, reflections and refractions written in OpenGL and GLSL, and I worked on an ffmpeg-based in-game video player together with a colleague. Unfortunately, videos and screenshots of my work have been lost to time.</p>
+			<aside>
+				<p>2005–2006</p>
+			</aside>
+			<p><a href="https://www.orxonox.net">Orxonox</a> was an open source space shooter game developed by students at ETH Zurich. I contributed a water shader with waves, transparency, reflections and refractions written in OpenGL and GLSL, and I worked on an ffmpeg-based in-game video player together with a colleague. Unfortunately, videos and screenshots of my work have been lost to time.</p>
 		</section>
 	</main>
-	<footer>
-		<!-- <p>We don't like empty footers.</p> -->
-	</footer>
 </body>
 </html>

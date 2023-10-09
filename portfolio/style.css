@@ -1,13 +1,9 @@
 :root {
-	/* TODO check that all are used more than once */
-	--color-bg: #f4f4f4;
-	--color-border: #ccc;
-	/*--color-bg-txt: #fffefd;*/
-	--color-bg-txt: #fefdfc;
+	--color-bg: #fefdfc;
 	--color-txt: #333;
 	--color-txt-cap: #999;
-	/*--color-txt-hl: #4779af;*/
-	/*--color-hov: #d5405c;*/
+	--color-txt-hl: #4779af;
+	--color-hov: #d5405c;
 }
 
 * {
@@ -24,7 +20,6 @@ body {
 	background: var(--color-bg-txt);
 }
 
-/* apply these to first level section isntead */
 header, main {
 	padding: 40px;
 	max-width: 800px;
@@ -32,6 +27,33 @@ header, main {
 }
 main {
 	margin-bottom: 100px;
+}
+
+aside {
+	font-size: 0.9rem;
+	color: var(--color-txt-cap);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	margin: 40px 0;
+}
+nav a {
+	margin: 0 10px;
+}
+nav a svg {
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
+@media screen and (min-width: 1520px) {
+	aside {
+		width: 320px;
+		margin-right: -360px;
+		float: right;
+	}
 }
 
 @font-face {
@@ -70,9 +92,17 @@ h3 {
 }
 
 /* TODO: do we want all this? */
-p, pre, img, figure,
+p, img, figure,
 section > ol, section > ul {
 	margin: 0.8rem 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-txt-hl);
+}
+a:hover {
+	color: var(--color-hov);
 }
 
 figure {
@@ -105,6 +135,7 @@ figcaption {
 	html {
 		font-size: 110%;
 	}
+	header,
 	main {
 		padding: 20px;
 	}
