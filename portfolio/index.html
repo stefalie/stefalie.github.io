@@ -36,6 +36,7 @@
 				<p>2021–2023</p>
 			</aside>
 			<video src="images/vulkan_sph_particle_fluid.webm" controls=""></video>
+			<video src="images/vulkan_sph_particle_fluid_sdf_collisions.webm" controls=""></video>
 			<p>For my work at <a href="https://www.virtamed.com">VirtaMed</a>, I Independently developed <a href="https://blog.mmacklin.com/2013/04/24/position-based-fluids/">position-based</a> SPH (smoothed-particle hydrodynamics) particle fluid for surgical simulation. It features such particle properties as viscosity, <a href="https://cg.informatik.uni-freiburg.de/publications/2013_SIGGRAPHASIA_surfaceTensionAdhesion.pdf">surface tension, and adhesion</a>. The GPU implementation animates and mixes several 100k blood, bile fluid, and water particles in real-time. To robustly collide the fluid against constantly deforming organs, a signed distance field is regenerated every frame by voxelizing the scene and propagating distances via Eikonal equation approximation. To enable this project, I created an in-house render hardware interface (RHI) on top of Vulkan.</p>
 		</section>
 		<section>
