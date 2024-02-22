@@ -22,6 +22,15 @@
 	</header>
 	<main>
 		<section>
+			<h2>GB — A GameBoy Emulator</h2>
+			<aside>
+				<p>2023–2024</p>
+				<p><a href="https://github.com/stefalie/gb">code on github</a></p>
+			</aside>
+			<video src="images/gb_donkey_kong.webm" controls=""></video>
+			<p><em>GB</em> is a simple proof of concept GameBoy emulator for Windows in alpha state written in C11. While GB is instruction-stepped and takes other shortcuts, it was play tested on and is solid enough to play all the games I loved as a kid.</p>
+		</section>
+		<section>
 			<h2>Vulkan SPH Particle Fluid</h2>
 			<aside>
 				<p>2021–2023</p>
@@ -33,26 +42,28 @@
 			<h2>Shape Modeling Language (ShapeML)</h2>
 			<aside>
 				<p>2018–2021</p>
+				<p><a href="https://github.com/stefalie/shapeml">code on github</a></p>
 			</aside>
 			<figure>
-				<a href="https://github.com/stefalie/shapeml"><img src="images/shapeml.webp" alt="Screenshots of several ShapeML scenes."></a>
+				<img src="images/shapeml.webp" alt="Screenshots of several ShapeML scenes.">
 				<figcaption>A showcase of some 3D models created with ShapeML.</figcaption>
 			</figure>
 			<p><em>ShapeML</em> is my own rule- or grammar-based procedural modeling library and framework inspired by <a href="https://en.wikipedia.org/wiki/Shape_grammar">Shape Grammars</a>, <a href="https://en.wikipedia.org/wiki/L-system">L-Systems</a>, and <a href="https://www.esri.com/en-us/arcgis/products/arcgis-cityengine/overview">CityEngine</a>. It generates detailed 3D models iteratively by replacing a coarse model with more detailed components. ShapeML comes with a parser/interpreter and it ships with an interactive OpenGL renderer that forward/deferred rendering, rendering of transparency objects (via <a href="http://jcgt.org/published/0002/02/09/">weighted blended order-independent transparency</a>, a layered fragment buffer, or <a href="https://software.intel.com/content/www/us/en/develop/articles/adaptive-transparency-hpg-2011.html">adaptive transparency</a>), several tone mapping methods, <a href="http://realtimecollisiondetection.net/blog/?p=86">sorted and batched draw calls</a>, <a href="http://the-witness.net/news/2013/09/shadow-mapping-summary-part-1/">optimized PCF cascade shadows maps</a>, physically-based rendering (PBR), fast approximate anti-aliasing (FXAA), and <a href="https://casual-effects.com/research/McGuire2012SAO/index.html">scalable ambient obscurance</a>, …</p>
-			<p>Code and details are on Github: <a href="https://github.com/stefalie/shapeml">https://github.com/stefalie/shapeml</a>.</p>
 		</section>
 		<section>
 			<h2>Ray Tracer</h2>
 			<aside>
 				<p>2022</p>
+				<p><a href="https://github.com/stefalie/raytracer">code on github</a></p>
 			</aside>
-			<a href="https://github.com/stefalie/raytracer"><img src="images/ray_tracer.webp" alt="Many ray traced spheres."></a>
-			<p>I crunched through Peter Shirley's brilliant <a href="https://raytracing.github.io">Ray Tracing in One Weekend</a> book and used it as an excuse to learn <a href="https://ziglang.org">zig</a>. The Code is on <a href="https://github.com/stefalie/raytracer">Github</a>.</p>
+			<img src="images/ray_tracer.webp" alt="Many ray traced spheres.">
+			<p>I crunched through Peter Shirley's brilliant <a href="https://raytracing.github.io">Ray Tracing in One Weekend</a> book and used it as an excuse to learn <a href="https://ziglang.org">zig</a>.</p>
 		</section>
 		<section>
 			<h2>Advent of Code</h2>
 			<aside>
 				<p>2020–2021</p>
+				<p><a href="https://github.com/stefalie/aoc2020">2020 code</a>, <a href="https://github.com/stefalie/aoc2021">2021 code</a></p>
 			</aside>
 			<img src="images/advent_of_code.webp" alt="Screenshot of the puzzle overview on the Advent of Code website.">
 			<p>In like to learn new programming languages. In my opinion, the best way to do that is to participate in the <a href="https://adventofcode.com">Advent of Code</a> and solve challenges in a new languge. I did so in <a href="https://github.com/stefalie/aoc2020">2020 with Rust</a> and in <a href="https://github.com/stefalie/aoc2021">2021 with zig</a>.</p>
@@ -61,12 +72,13 @@
 			<h2>Outdoor Map</h2>
 			<aside>
 				<p>2020</p>
+				<p><a href="https://github.com/stefalie/map.lienhard.io">code on github</a></p>
 			</aside>
 			<figure>
 				<a href="https://map.lienhard.io"><img src="images/outdoor_map.webp" alt="A map of Switzerland with markers for various sports outings."></a>
 				<figcaption>Legend: blue — ski touring, red — hiking, green — running, purple — climbing/mountaineering, orange — cycling, turqoise — cross country skiing</figcaption>
 			</figure>
-			<p>For fun I made a map with all my hikes, climbing outing, ski tours, etc. Tracks are exported from <a href="https://www.strava.com/athletes/673092">Strava</a> as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPX</a> or entered manually (for older outing). The data is simplified/subsampled and aggregated into a <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> layer that is shown on top of either a <a href="https://map.lienhard.io">Swisstopo map</a> or a <a href="https://map.lienhard.io/leaflet.html">Leaflet map</a>. The Code is on <a href="https://github.com/stefalie/map.lienhard.io">Github</a>.</p>
+			<p>For fun I made a map with all my hikes, climbing outing, ski tours, etc. Tracks are exported from <a href="https://www.strava.com/athletes/673092">Strava</a> as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPX</a> or entered manually (for older outing). The data is simplified/subsampled and aggregated into a <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> layer that is shown on top of either a <a href="https://map.lienhard.io">Swisstopo map</a> or a <a href="https://map.lienhard.io/leaflet.html">Leaflet map</a>.</p>
 		</section>
 		<section>
 			<h2>Design Transformations for Rule-based Procedural Modeling</h2>
